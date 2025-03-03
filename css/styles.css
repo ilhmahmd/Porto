@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Monomakh&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mrs+Sheppards&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    background-color: #eceaea;
+    color: #111;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+    z-index: 1000;
+    background: rgba(235, 235, 235, 0.521);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+}
+
+.navbar .left p{
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    color: #292929;
+}
+
+/* Animasi rotate ke belakang */
+.navbar .left p {
+    transition: transform 0.5s ease-in-out;
+    transform-origin: center;
+}
+
+.navbar .left p:hover {
+    transform: rotateX(180deg);
+}
+
+.navbar .center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: -1px;
+    color: #292929;
+}
+
+.navbar .right a i {
+    font-size: 30px;
+    color: #292929;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container2 {
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #eceaea;
+}
+
+.container h3 {
+    color: #292929;
+    font-family: 'Audiowide',sans-serif;
+    margin-bottom: -50px;
+    font-size: 30px;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eceaea;
+}
+
+.card, .card2, .card3 {
+    display: inline-block;
+    margin: -25px 0;
+    font-size: 70px;
+    color: #292929;
+}
+
+.card {
+    animation: fadeInCard 3.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.card2 {
+    animation: fadeInCard 6.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.card3 {
+    animation: fadeInCard 9.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Default: elemen tidak terlihat */
+.card, .card2, .card3 {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Saat terlihat di layar */
+.card.show, .card2.show, .card3.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(10px) scale(1.02);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Animasi scale saat hover */
+.card h1, .card2 h1, .card3 h1 {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card h1:hover, .card2 h1:hover, .card3 h1:hover {
+    transform: scale(1.1); /* Perbesar saat hover */
+}
+
+.container h1 {
+    font-size: 350px;
+    text-transform: uppercase;
+    font-family: "Audiowide", sans-serif;
+    letter-spacing: 2px;
+    color: #292929;
+    opacity: 0;
+    animation: fadeInH1 3.5s ease-in-out forwards;
+}
+
+.container h1::after {
+    content: "/241";
+    font-size: 60px; /* Sesuaikan ukuran */
+    font-weight: lighter;
+    color: #292929;
+    margin-left: 5px; /* Jarak dari teks WORK */
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -25px;
+    font-family: 'Poppins',sans-serif;
+}
+
+.container3 .kiri h1:hover{
+    transition: transform 0.5s ease-in-out;
+    transform-origin: center;
+}
+
+.container3 .kiri h1:hover{
+    transform: rotateX(180deg);
+}
+
+
+
+@keyframes fadeInH1 {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(10px) scale(1.02);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+.container2 h1 {
+    font-family: 'Audiowide', sans-serif;
+}
+
+.running-text {
+    width: 120vw;
+    background:#292929;
+    color: white;
+    font-size: 70px;
+    text-align: center;
+    font-weight: lighter;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 90px;
+    transform: rotate(-5deg);
+    margin-left: -20px;
+    padding-top: -10px;
+    
+}
+
+.running-text marquee {
+    font-family: "Poppins", sans-serif;
+}
+
+.blue-text {
+    color: rgb(218, 40, 28);
+    font-size: 15vw;
+    font-style: italic;
+    font-family: "Mrs Sheppards", cursive;
+    position: absolute;
+    top: 55%;
+    left: 60%;
+    transform: translate(-50%, -50%) rotate(-10deg);
+}
+
+.container3 {
+    width: 100vw;
+    height: 23vh;
+    display: flex;
+    flex-direction: row;
+    border-top: 2px solid #292929;
+    padding-top: 20px; 
+    border-bottom: 2px solid #292929;
+}
+
+.container3 .kiri {
+    width: 25vw;
+}
+
+.container3 .kiri h1{
+    font-family: 'Poppins',sans-serif;
+    font-size: 200px;
+    margin-top: -50px;
+    margin-left: -200px;
+    color: #292929;
+}
+
+
+.container3 .tengah {
+    width: 50vw;
+    text-align: left;
+}
+
+.container3 .tengah p {
+    font-family: 'Poppins', sans-serif;
+    border-top: 1px;
+    margin-top: 50px;
+}
+
+.container3 .kanan {
+    width: 25vw;
+    margin-top: 50px;
+    text-align: left;
+    
+}
+
+.container3 .kanan a {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: #292929;
+}
+
+.container4 {
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    padding-top: 40px;
+}
+
+.container4 .fleft {
+    width: 40vw;
+}
+
+.container4 .fleft h1{
+    font-family: 'Poppins',sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: #292929;
+}
+
+.container4 .fcenter {
+    width: 60vw;
+    text-align: right;
+}
+
+.container4 .fcenter p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    margin-right: 370px;
+}
+
+
+@media (max-width: 768px) {
+
+    .container {
+        height: 700px;
+    }
+
+    .container2 {
+        height: 280px;
+    }
+
+    .container h1 {
+        font-size: 20vw;
+        margin-top: 50px;
+    }
+
+    .container h3 {
+        font-size: 5vw;
+        margin-top: -120px;
+    }
+
+    .navbar .left p {
+        font-size: 20px;
+        padding-left: 20px;
+        padding-top: 5px;
+
+    }
+
+    .navbar .right {
+        visibility: hidden;
+    }
+
+    .navbar .center {
+        padding-top: 10px;
+        text-align: left;
+    }
+
+    .navbar .center span{
+        font-size: 10px;
+    }
+    
+    
+    .running-text {
+        margin-top: -140px;
+    }
+
+    .blue-text {
+        font-size: 18vw;
+        left: 65%;
+        top: 48%;
+    }
+
+    .container h1::after {
+        font-size: 5vw;
+    }
+
+    .navbar {
+        font-size: 5%;
+        padding: 10px;
+    }
+
+    .navbar .left {
+        font-size: 12px;
+    }
+
+    .navbar .center {
+        font-size: 4%;
+    }
+
+    .navbar .right a i {
+        font-size: 20px !important;
+    }
+
+    .card, .card2, .card3 {
+        display: inline-block;
+        margin: -5px 0;
+        font-size: 17px;
+        color: #292929;
+    }
+
+    .container3 {
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+        border-top: 1px solid #292929;
+        border-bottom: 1px solid #292929;
+    }
+    .container3 .kiri h1{
+       font-size: 200px;
+       margin-left: -70px;
+       margin-top: -110px;
+    }
+
+    .container3 .tengah p{
+        font-size: 14px;
+        margin-left: 20px;
+        margin-top: -50px;
+     }
+
+     .container3 .kanan {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Rata kiri */
+        margin-left: 20px;
+        gap: 1px;
+    }
+    
+    .container3 .kanan a {
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        color: #292929;
+        font-size: 14px;
+        display: flex; /* Mengatur ikon dan teks sejajar */
+        align-items: center; /* Menyamakan tinggi ikon dan teks */
+        margin: -7px 0;
+        gap: 6px; /* Beri sedikit jarak antar link */
+    }
+    
+    .container3 .kanan a i {
+        font-size: 18px; /* Ukuran ikon */
+        margin-right: 8px; /* Jarak antara ikon dan teks */
+        color: #292929; /* Warna ikon */
+    }
+
+    .container4 {
+        display: flex;
+        flex-direction: column;
+        height: 80px;
+        padding-top: -10px;
+        /* border-top: 1px solid #292929; */
+    }
+
+    .container4 .fleft h1{
+        margin-top: -25px;
+        font-size: 12px;
+        width: 100vw;
+    }
+
+    .container4 .fcenter p{
+        font-size: 12px;
+        width: 100vw;
+        text-align: center;
+    }
+    
+
+}
