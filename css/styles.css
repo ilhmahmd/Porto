@@ -109,7 +109,7 @@ html, body {
     background-color: #eceaea;
 }
 
-.card, .card2, .card3 {
+.card, .card2, .card3, .card4, .card5 {
     display: inline-block;
     margin: -25px 0;
     font-size: 70px;
@@ -128,15 +128,23 @@ html, body {
     animation: fadeInCard 9.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
+.card4 {
+    animation: fadeInCard 9.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.card5 {
+    animation: fadeInCard 9.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
 /* Default: elemen tidak terlihat */
-.card, .card2, .card3 {
+.card, .card2, .card3, .card4, .card5 {
     opacity: 0;
     transform: translateY(30px) scale(0.95);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 /* Saat terlihat di layar */
-.card.show, .card2.show, .card3.show {
+.card.show, .card2.show, .card3.show, .card4.show, .card5.show {
     opacity: 1;
     transform: translateY(0) scale(1);
 }
@@ -158,11 +166,11 @@ html, body {
 }
 
 /* Animasi scale saat hover */
-.card h1, .card2 h1, .card3 h1 {
+.card h1, .card2 h1, .card3 h1, .card4 h1, .card5 h1 {
     transition: transform 0.3s ease-in-out;
 }
 
-.card h1:hover, .card2 h1:hover, .card3 h1:hover {
+.card h1:hover, .card2 h1:hover, .card3 h1:hover, .card4 h1:hover, .card5 h1:hover {
     transform: scale(1.1); /* Perbesar saat hover */
 }
 

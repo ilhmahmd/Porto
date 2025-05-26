@@ -22,13 +22,13 @@
 .container {
     display: flex;
     height: 100vh;
-    background-color: #be3030;
+    background-color: #136926;
 }
 
 /* Kolom kiri (Fixed di desktop) */
 .sidebar {
     width: 50%;
-    background: #be3030;
+    background: #136926;
     padding-left: 50px;
     display: flex;
     flex-direction: column;
@@ -50,8 +50,12 @@
 .navbar .left {
     font-size: 40px;
     font-weight: 800;
-    margin-top: -330px;
-    color: #e0e0e0;
+    margin-top: -350px;
+    color: #d3d3d3;
+}
+
+.navbar .left p{
+    font-family: 'Poppins',sans-serif;
 }
 
 .navbar .left p {
@@ -63,22 +67,18 @@
     transform: rotateX(180deg);
 }
 
-.navbar .left p{
-    font-family: 'Poppins',sans-serif;
-}
-
 .navbar .center span {
     font-size: 14px;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
     letter-spacing: -1px;
     margin-top: 10px;
-    color: #e0e0e0;
+    color: #d3d3d3;
 }
 
 .navbar .center {
     margin-left: 200px;
-    margin-top: -330px;
+    margin-top: -350px;
 }
 
 /* Judul dan deskripsi dalam sidebar */
@@ -88,12 +88,12 @@
     text-align: left;
     margin-left: 250px;
     font-family: 'Audiowide', sans-serif;
-    color: #e0e0e0;
+    color: #d3d3d3;
 }
 
 .content p {
     font-size: 14px;
-    color: #e0e0e0;
+    color: #d3d3d3;
     margin-left: 250px;
 }
 
@@ -127,7 +127,7 @@
     padding: 40px;
     overflow-y: auto;
     height: 100vh;
-    background: #eee4e4;
+    background: #d3d3d3;
     z-index: 1;
     margin-left: 980px;
     margin-right: 100px;
@@ -220,11 +220,15 @@
     .gallery {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 2px;
     }
 
     .item img {
-        width: 140%;
+        width: 100%;
+    }
+
+    .item {
+        width: 100%;
     }
 
     .navbar .left {
@@ -239,8 +243,9 @@
 /* Extra Small Mobile (Lebar max 480px) */
 @media screen and (max-width: 480px) {
     .content h1 {
-        font-size: 75px;
+        font-size: 42px!important;
         margin-left: 15px;
+        margin-bottom: 10px;
     }
 
     .content p {
@@ -249,7 +254,7 @@
     }
 
     .navbar .center span {
-        font-size: 10px;
+        font-size: 9px;
     }
 
     .navbar .center {
